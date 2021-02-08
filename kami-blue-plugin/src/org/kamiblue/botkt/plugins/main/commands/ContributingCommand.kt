@@ -5,6 +5,7 @@ import org.kamiblue.botkt.command.Category
 
 object ContributingCommand : BotCommand(
     name = "contributing",
+    description = "Link to the contributing instructions",
     category = Category.GITHUB
 ) {
     init {

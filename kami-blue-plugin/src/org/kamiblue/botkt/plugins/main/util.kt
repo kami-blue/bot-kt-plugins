@@ -5,12 +5,12 @@ import io.ktor.http.*
 import io.ktor.utils.io.charsets.*
 import org.kamiblue.botkt.Main
 
-suspend fun isNon200Response(url: String): Boolean {
+suspend fun urlResponseCode(url: String): Int {
     return try {
-        (Main.discordHttp.get<HttpStatusCode> {
+        Main.discordHttp.get<HttpStatusCode> {
             url(url)
-        }.value == 200)
+        }.value
     } catch (e: MalformedInputException) { // for some reason HttpStatusCode throws an exception on 404
-        false
+        404
     }
 }

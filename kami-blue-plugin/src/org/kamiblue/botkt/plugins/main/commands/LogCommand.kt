@@ -6,6 +6,7 @@ import org.kamiblue.botkt.utils.normal
 
 object LogCommand : BotCommand(
     name = "log",
+    description = "How to find your log file",
     category = Category.INFO
 ) {
     init {

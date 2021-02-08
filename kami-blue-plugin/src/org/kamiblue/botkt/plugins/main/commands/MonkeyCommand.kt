@@ -7,6 +7,7 @@ import kotlin.random.nextInt
 
 object MonkeyCommand : BotCommand(
     name = "monkey",
+    description = "Random monkey emojis",
     alias = arrayOf("m", "skid", "pvp"),
     category = Category.FUN
 ) {

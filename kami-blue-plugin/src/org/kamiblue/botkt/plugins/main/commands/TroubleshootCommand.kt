@@ -6,6 +6,7 @@ import org.kamiblue.botkt.utils.normal
 
 object TroubleshootCommand : BotCommand(
     name = "troubleshoot",
+    description = "Troubleshooting info in KAMI Blue",
     alias = arrayOf("tsc"),
     category = Category.INFO
 ) {

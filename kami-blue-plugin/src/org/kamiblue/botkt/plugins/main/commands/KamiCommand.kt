@@ -6,6 +6,7 @@ import org.kamiblue.botkt.utils.normal
 
 object KamiCommand : BotCommand(
     name = "kami",
+    description = "KAMI vs KAMI Blue",
     category = Category.INFO
 ) {
     init {

@@ -6,6 +6,7 @@ import org.kamiblue.botkt.utils.normal
 
 object DonateCommand : BotCommand(
     name = "donate",
+    description = "Donation link and info",
     category = Category.INFO
 ) {
     init {

@@ -6,6 +6,7 @@ import org.kamiblue.botkt.utils.normal
 
 object KotlinCommand : BotCommand(
     name = "kotlin",
+    description = "Why do we use Kotlin?",
     category = Category.INFO
 ) {
     init {

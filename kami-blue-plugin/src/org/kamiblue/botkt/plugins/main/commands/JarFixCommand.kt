@@ -10,6 +10,7 @@ import java.io.File
 
 object JarFixCommand : BotCommand(
     name = "jarfix",
+    description = "Fixing jar files on windows",
     category = Category.INFO
 ) {
     init {

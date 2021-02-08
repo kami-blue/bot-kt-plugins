@@ -6,6 +6,7 @@ import org.kamiblue.botkt.utils.normal
 
 object InstallCommand : BotCommand(
     name = "install",
+    description = "How to install KAMI Blue",
     category = Category.INFO
 ) {
     init {

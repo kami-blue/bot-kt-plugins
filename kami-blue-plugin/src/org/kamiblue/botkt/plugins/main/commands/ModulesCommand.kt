@@ -5,6 +5,7 @@ import org.kamiblue.botkt.command.Category
 
 object ModulesCommand : BotCommand(
     name = "modules",
+    description = "Link to modules page",
     category = Category.INFO
 ) {
     init {

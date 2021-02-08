@@ -5,6 +5,7 @@ import org.kamiblue.botkt.command.Category
 
 object RandomMonkeyCommand : BotCommand(
     name = "randommonkey",
+    description = "Random monkey gifs",
     alias = arrayOf("funnymonkey", "hause"),
     category = Category.FUN
 ) {

@@ -11,6 +11,7 @@ import org.kamiblue.botkt.utils.error
 
 object ServerStatsCommand : BotCommand(
     name = "serverstats",
+    description = "Get information about a Minecraft server",
     alias = arrayOf("serverstat", "stats", "stat"),
     category = Category.FUN
 ) {
@@ -48,7 +49,7 @@ object ServerStatsCommand : BotCommand(
                     }
                 } catch (e: Exception) {
                     Main.logger.debug("Error in StatsCommand", e)
-                    channel.error("Could not find an online server with IP `$ip`!")
+                    channel.error("Could not find an online Minecraft server with IP `$ip`!")
                     return@execute
                 }
             }

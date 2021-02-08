@@ -6,6 +6,7 @@ import org.kamiblue.botkt.utils.normal
 
 object LearnCommand : BotCommand(
     name = "learn",
+    description = "Learning to make a Minecraft mod",
     category = Category.INFO
 ) {
     init {

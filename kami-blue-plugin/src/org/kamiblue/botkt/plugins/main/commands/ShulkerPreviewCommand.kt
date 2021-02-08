@@ -6,6 +6,7 @@ import org.kamiblue.botkt.utils.normal
 
 object ShulkerPreviewCommand : BotCommand(
     name = "shulkerpreview",
+    description = "Why isn't ShulkerPreview working!!!",
     category = Category.INFO
 ) {
     init {

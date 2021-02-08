@@ -6,6 +6,7 @@ import org.kamiblue.botkt.utils.normal
 
 object SafeCommand : BotCommand(
     name = "safe",
+    description = "Is KAMI Blue safe?",
     category = Category.INFO
 ) {
     init {

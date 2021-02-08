@@ -22,6 +22,7 @@ class KamiBluePlugin : Plugin() {
 
     private val commandList = listOf(
         AnimeCommand,
+        BigCatCommand,
         BigRatCommand,
         BigSnailCommand,
         ContributingCommand,
