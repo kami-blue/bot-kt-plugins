@@ -1,0 +1,10 @@
+{
+  "name": "KAMI Blue Plugin",
+  "version": "1.0.0",
+  "authors": ["Liv"],
+  "description": "Plugin for the KAMI Blue Discord server",
+  "url": "https://some.url/todo",
+  "bot_version": "v1.8.9",
+  "main_class": "org.kamiblue.botkt.plugins.main.KamiBluePlugin",
+  "hot_reload": true
+}
