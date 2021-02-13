@@ -3,7 +3,7 @@ package org.kamiblue.botkt.plugins.main.commands
 import org.kamiblue.botkt.command.BotCommand
 import org.kamiblue.botkt.command.Category
 
-object BigDogCommand : BotCommand(
+object BigMonkeyCommand : BotCommand(
         name = "bigmonkey",
         description = "They are massive :o",
         alias = arrayOf("hugemonkey"),
