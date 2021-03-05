@@ -3,6 +3,7 @@ package org.kamiblue.botkt.plugins.main
 import org.kamiblue.botkt.Main
 import org.kamiblue.botkt.plugin.Plugin
 import org.kamiblue.botkt.plugins.main.commands.*
+import org.kamiblue.botkt.plugins.main.managers.PluginDownloadManager
 
 class KamiBluePlugin : Plugin() {
 
@@ -12,6 +13,8 @@ class KamiBluePlugin : Plugin() {
         commandList.forEach {
             commands.add(it)
         }
+
+        managers.add(PluginDownloadManager)
 
         Main.logger.debug("KAMI Blue Plugin loaded ${commandList.size} commands!")
     }
