@@ -4,6 +4,7 @@ import org.kamiblue.botkt.Main
 import org.kamiblue.botkt.plugin.Plugin
 import org.kamiblue.botkt.plugins.main.commands.*
 import org.kamiblue.botkt.plugins.main.managers.PluginDownloadManager
+import org.kamiblue.botkt.plugins.main.managers.ReactionLoggingManager
 
 class KamiBluePlugin : Plugin() {
 
@@ -15,6 +16,7 @@ class KamiBluePlugin : Plugin() {
         }
 
         managers.add(PluginDownloadManager)
+        managers.add(ReactionLoggingManager)
 
         Main.logger.debug("KAMI Blue Plugin loaded ${commandList.size} commands!")
     }
