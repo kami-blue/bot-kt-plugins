@@ -15,7 +15,8 @@ object XRayCommand : BotCommand(
                 description = "**TL:DR No, not right now.**\n\n" +
                 "The old XRay module was removed due to the code being ancient and unmaintainable, and incompatible with the new GUI + setting system.\n" +
                 "There is an open [issue](https://github.com/kami-blue/client/issues/289) to re-add XRay, which should soon be resolved.\n"+
-                "For right now, good alternatives for XRay are Search, Freecam, and Baritone, depending on why you wanted XRay.")
+                "For right now, good alternatives for XRay are Search, Freecam, and Baritone, depending on why you wanted XRay."
+            )
         }
     }
 }
