@@ -57,7 +57,7 @@ class KamiBluePlugin : Plugin() {
         SmallSnailCommand,
         TroubleshootCommand,
         UpdatesRoleCommand,
-        XrayCommand
+        XRayCommand
     )
 
 }
