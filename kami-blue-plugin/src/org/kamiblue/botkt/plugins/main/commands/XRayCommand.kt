@@ -2,6 +2,7 @@ package org.kamiblue.botkt.plugins.main.commands
 
 import org.kamiblue.botkt.command.BotCommand
 import org.kamiblue.botkt.command.Category
+import org.kamiblue.botkt.utils.normal
 
 object XRayCommand : BotCommand(
     name = "xray",
@@ -11,7 +12,7 @@ object XRayCommand : BotCommand(
     init {
         execute {
             channel.normal(
-                title = "Does KAMI Blue have an XRay Module",
+                title = "Does KAMI Blue have an XRay Module?",
                 description = "**TL:DR No, not right now.**\n\n" +
                 "The old XRay module was removed due to the code being ancient and unmaintainable, and incompatible with the new GUI + setting system.\n" +
                 "There is an open [issue](https://github.com/kami-blue/client/issues/289) to re-add XRay, which should soon be resolved.\n"+
