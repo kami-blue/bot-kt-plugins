@@ -51,6 +51,7 @@ class KamiBluePlugin : Plugin() {
         MonkeyCommand,
         RandomMonkeyCommand,
         SafeCommand,
+        SettingsCommand,
         ServerStatsCommand,
         ShulkerPreviewCommand,
         SmallRatCommand,
