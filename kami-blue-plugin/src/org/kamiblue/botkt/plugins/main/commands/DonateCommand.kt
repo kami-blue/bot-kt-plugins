@@ -13,7 +13,7 @@ object DonateCommand : BotCommand(
         execute {
             if (channel.id == 722436626248237076) {
                 channel.normal(
-                    title = "дарить",
+                    title = "Пожертвовать",
                     description = "Вы можете поддержать разработчиков клиента задонатив небольшую сумму используя платежную систему PayPal.\nПри донате от $5 вы можете получить специальный плащ KAMI Blue, который будет виден всем кто использует KAMI Blue.\nСсылка на PayPal: https://kamiblue.org/donate"
                 )
             } else {
