@@ -33,6 +33,7 @@ class KamiBluePlugin : Plugin() {
         BigMonkeyCommand,
         BigRatCommand,
         BigSnailCommand,
+        CASettingsCommand,
         ChristmasBigRatCommand,
         ContributingCommand,
         DonateCommand,
