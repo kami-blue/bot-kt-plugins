@@ -27,7 +27,7 @@ object PluginDownloadManager : Manager {
                 val attachments =
                     if (!event.message.attachments.isEmpty()) pluginMsg.attachments else return@asyncListener
 
-                if (channel.id != 699982782515904603 && channel.id != 792012270179844126) return@asyncListener
+                if (channel.id != 821815442510970940 && channel.id != 792012270179844126) return@asyncListener
                 if (!pluginMsg.author.hasPermission(PermissionTypes.MANAGE_PLUGINS)) return@asyncListener
                 if (!attachments.any { it.filename == fileName }) return@asyncListener
 
