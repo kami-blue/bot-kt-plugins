@@ -13,7 +13,7 @@ object CASettingsCommand : BotCommand(
         execute {
             channel.normal(
                     title = "CrystalAura settings",
-                    description = "The default settings in the latest beta are usually good, adjust the settings to your play style and ping.\nIf you have used older versions of KAMI Blue then press the "Defaults" button to get the new default settings"
+                    description = "The default settings in the latest beta are usually good, adjust the settings to your play style and ping.\n\nIf you have used older versions of KAMI Blue then press the \"Defaults\" button to get the new default settings"
             )
         }
     }
