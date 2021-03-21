@@ -12,7 +12,7 @@ import org.kamiblue.commons.utils.MathUtils
 import java.io.File
 
 object ExportRolesCommand : BotCommand(
-    name = "ers",
+    name = "exportroles",
     description = "Export all users with roles and their roles",
     category = Category.MISC
 ) {

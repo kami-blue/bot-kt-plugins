@@ -12,7 +12,7 @@ import org.kamiblue.commons.utils.MathUtils
 import java.io.File
 
 object ExportEmojiCommand : BotCommand(
-    name = "ees",
+    name = "exportemoji",
     description = "Export all emojis",
     category = Category.MISC
 ) {
