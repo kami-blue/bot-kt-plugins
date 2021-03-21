@@ -37,6 +37,7 @@ class KamiBluePlugin : Plugin() {
         ChristmasBigRatCommand,
         ContributingCommand,
         DonateCommand,
+        ExportBansCommand,
         ExportEmojiCommand,
         ExportRolesCommand,
         GoogleCommand,
