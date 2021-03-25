@@ -45,6 +45,7 @@ class KamiBluePlugin : Plugin() {
         HttpCatCommand,
         InstallCommand,
         JarFixCommand,
+        JvavCommand,
         KamiCommand,
         KotlinCommand,
         LearnCommand,
