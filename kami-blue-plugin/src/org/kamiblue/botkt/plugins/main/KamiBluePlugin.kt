@@ -58,6 +58,7 @@ class KamiBluePlugin : Plugin() {
         ShulkerPreviewCommand,
         SmallRatCommand,
         SmallSnailCommand,
+        SpammerCommand,
         TroubleshootCommand,
         UpdatesRoleCommand,
         XRayCommand
