@@ -23,7 +23,7 @@ object PingDeleteManager : Manager {
                 it.councilMembers
             } ?: return@asyncListener
 
-            if (cms.any { message.content.contains(it.key.toString()) }) {
+            if (cms.any { message.content.contains(it.key.toString()) } || message.content.contains("<@&754406610239225927>")) {
                 message.tryDelete()
                 message.channel.send {
                     embed {
