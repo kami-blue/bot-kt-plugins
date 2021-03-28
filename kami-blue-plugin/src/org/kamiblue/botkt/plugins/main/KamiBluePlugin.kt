@@ -3,6 +3,7 @@ package org.kamiblue.botkt.plugins.main
 import org.kamiblue.botkt.Main
 import org.kamiblue.botkt.plugin.Plugin
 import org.kamiblue.botkt.plugins.main.commands.*
+import org.kamiblue.botkt.plugins.main.managers.PingDeleteManager
 import org.kamiblue.botkt.plugins.main.managers.PluginDownloadManager
 import org.kamiblue.botkt.plugins.main.managers.ReactionLoggingManager
 
@@ -15,6 +16,7 @@ class KamiBluePlugin : Plugin() {
             commands.add(it)
         }
 
+        managers.add(PingDeleteManager)
         managers.add(PluginDownloadManager)
         managers.add(ReactionLoggingManager)
 
