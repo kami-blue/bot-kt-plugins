@@ -19,6 +19,7 @@ class KamiBluePlugin : Plugin() {
         managers.add(PingDeleteManager)
         managers.add(PluginDownloadManager)
         managers.add(ReactionLoggingManager)
+        managers.add(BottomDeleteManager)
 
         Main.logger.debug("KAMI Blue Plugin loaded ${commandList.size} commands!")
     }
