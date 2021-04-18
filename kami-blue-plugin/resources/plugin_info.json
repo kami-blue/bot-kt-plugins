@@ -4,7 +4,7 @@
   "authors": ["Liv"],
   "description": "Plugin for the KAMI Blue Discord server",
   "url": "https://some.url/todo",
-  "bot_version": "v1.9.0",
+  "bot_version": "v1.9.3",
   "main_class": "org.kamiblue.botkt.plugins.main.KamiBluePlugin",
   "hot_reload": true
 }
