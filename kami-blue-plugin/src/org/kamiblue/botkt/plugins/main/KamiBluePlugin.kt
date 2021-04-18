@@ -10,17 +10,20 @@ import org.kamiblue.botkt.plugins.main.managers.ReactionLoggingManager
 class KamiBluePlugin : Plugin() {
 
     override fun onLoad() {
-        Main.logger.debug("KAMI Blue Plugin loading...\n${commandList.joinToString { it.javaClass.simpleName }}")
+        Main.logger.debug("KAMI Blue Plugin loading...\n" +
+                "${commandList.joinToString { it.javaClass.simpleName }}\n" +
+                managerList.joinToString { it.javaClass.simpleName }
+        )
 
         commandList.forEach {
             commands.add(it)
         }
 
-        managers.add(PingDeleteManager)
-        managers.add(PluginDownloadManager)
-        managers.add(ReactionLoggingManager)
+        managerList.forEach {
+            managers.add(it)
+        }
 
-        Main.logger.debug("KAMI Blue Plugin loaded ${commandList.size} commands!")
+        Main.logger.debug("KAMI Blue Plugin loaded ${commandList.size} commands and ${managerList.size} managers!")
     }
 
     override fun onUnload() {
@@ -64,6 +67,12 @@ class KamiBluePlugin : Plugin() {
         TroubleshootCommand,
         UpdatesRoleCommand,
         XRayCommand
+    )
+
+    private val managerList = listOf(
+        PingDeleteManager,
+        PluginDownloadManager,
+        ReactionLoggingManager
     )
 
 }
