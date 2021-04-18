@@ -10,8 +10,7 @@ import org.kamiblue.botkt.Main
 import org.kamiblue.botkt.PermissionTypes
 import org.kamiblue.botkt.Permissions.hasPermission
 import org.kamiblue.botkt.manager.Manager
-import org.kamiblue.botkt.utils.Colors
-import org.kamiblue.botkt.utils.normal
+import org.kamiblue.botkt.utils.success
 import org.kamiblue.event.listener.asyncListener
 import java.io.File
 
@@ -49,7 +48,7 @@ object PluginDownloadManager : Manager {
                 deferred.join()
 
                 val stopTime = System.currentTimeMillis() - time
-                val message = channel.normal("Downloaded plugin `$fileName`, took $stopTime ms!")
+                channel.success("Downloaded plugin `$fileName`, took $stopTime ms!")
             }
         }
     }
