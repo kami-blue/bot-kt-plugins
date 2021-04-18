@@ -4,14 +4,13 @@ import io.ktor.client.request.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.runBlocking
 import net.ayataka.kordis.event.events.message.MessageReceiveEvent
 import org.kamiblue.botkt.Main
 import org.kamiblue.botkt.PermissionTypes
 import org.kamiblue.botkt.Permissions.hasPermission
-import org.kamiblue.botkt.command.commands.system.ExceptionCommand
 import org.kamiblue.botkt.manager.Manager
 import org.kamiblue.botkt.utils.Colors
-import org.kamiblue.botkt.utils.error
 import org.kamiblue.botkt.utils.normal
 import org.kamiblue.event.listener.asyncListener
 import java.io.File
@@ -21,18 +20,18 @@ object PluginDownloadManager : Manager {
 
     init {
         asyncListener<MessageReceiveEvent> { event ->
-            try {
+            runBlocking {
                 val pluginMsg = event.message
-                val channel = pluginMsg.serverChannel ?: return@asyncListener
+                val channel = pluginMsg.serverChannel ?: return@runBlocking
                 val attachments =
-                    if (!event.message.attachments.isEmpty()) pluginMsg.attachments else return@asyncListener
+                    if (!event.message.attachments.isEmpty()) pluginMsg.attachments else return@runBlocking
 
-                if (channel.id != 821815442510970940 && channel.id != 792012270179844126) return@asyncListener
-                if (!pluginMsg.author.hasPermission(PermissionTypes.MANAGE_PLUGINS)) return@asyncListener
-                if (!attachments.any { it.filename == fileName }) return@asyncListener
+                if (channel.id != 821815442510970940 && channel.id != 792012270179844126) return@runBlocking
+                if (!pluginMsg.author.hasPermission(PermissionTypes.MANAGE_PLUGINS)) return@runBlocking
+                if (!attachments.any { it.filename == fileName }) return@runBlocking
 
                 val attachment =
-                    attachments.find { it.filename == fileName } ?: return@asyncListener
+                    attachments.find { it.filename == fileName } ?: return@runBlocking
 
                 val url = attachment.url
                 val time = System.currentTimeMillis()
@@ -47,18 +46,10 @@ object PluginDownloadManager : Manager {
                     }
                 }
 
-                val message = channel.normal("Downloading plugin `$fileName` from URL <$url>...")
-
                 deferred.join()
+
                 val stopTime = System.currentTimeMillis() - time
-                message.edit {
-                    description = "Downloaded plugin `$fileName`, took $stopTime ms!"
-                    color = Colors.SUCCESS.color
-                }
-            } catch (e: Exception) {
-                ExceptionCommand.addException(e)
-                Main.logger.error("Error in PluginDownloadManager", e)
-                event.message.channel.error("Error in PluginDownloadManager, use `;exception` to view it")
+                val message = channel.normal("Downloaded plugin `$fileName`, took $stopTime ms!")
             }
         }
     }
