@@ -67,8 +67,7 @@ class KamiBluePlugin : Plugin() {
         SmallSnailCommand,
         SpammerCommand,
         TroubleshootCommand,
-        UpdatesRoleCommand,
-        XRayCommand
+        UpdatesRoleCommand
     )
 
     private val managerList = listOf(
